@@ -1,0 +1,24 @@
+{
+  "name": "leet-blog",
+  "version": "1.0.0",
+  "description": "A blog for documenting programing, learning, everyday in one.",
+  "author": "Leet",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@bassist/utils": "^0.14.0",
+    "medium-zoom": "^1.0.8"
+  },
+  "devDependencies": {
+    "@mdit-vue/shared": "^1.0.0",
+    "@types/node": "^20.9.0",
+    "sass": "^1.69.5",
+    "vitepress": "1.0.0-rc.25",
+    "vue": "^3.3.8"
+  }
+}
