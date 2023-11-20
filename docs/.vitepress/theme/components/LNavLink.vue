@@ -44,13 +44,17 @@ const svg = computed(() => {
 .m-nav-link {
   position: relative;
   display: block;
-  border: 1px solid var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-bg-alt);
+  background-color: var(--vp-c-bg-alt);
   border-radius: 8px;
+  text-decoration: inherit;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
-    background-color: var(--vp-c-bg-soft);
+    background-color: var(--vp-c-bg);
+    border-color: var(--vp-c-neutral);
+    box-shadow: var(--vp-shadow-2);
   }
 
   .box {

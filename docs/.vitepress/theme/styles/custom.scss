@@ -15,11 +15,6 @@
   transition: opacity 1s ease;
 }
 
-.twikoo .el-loading-spinner .circular {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .medium-zoom-overlay {
   z-index: var(--medium-zoom-z-index);
   background: var(--medium-zoom-c-bg) !important;
@@ -27,3 +22,4 @@
 .medium-zoom-overlay ~ img {
   z-index: calc(var(--medium-zoom-z-index) + 1);
 }
+

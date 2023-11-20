@@ -9,6 +9,7 @@ import Twikoo from './components/Twikoo.vue'
 import NavVisitor from './components/NavVisitor.vue';
 import DocFooter from './components/DocFooter.vue';
 import ZoomImg from './components/ZoomImg.vue'
+import Layout from './components/Layout.vue'
 import './styles/index.scss'
 
 let homePageStyle: HTMLStyleElement | undefined
@@ -26,10 +27,7 @@ const theme: Theme = {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(defaultTheme.Layout, props, {
-      'nav-bar-title-after': h(NavVisitor),
-      'doc-after': h(Twikoo, DocFooter),
-    })
+    return h(Layout, props)
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
     app.component('LNavLinks', LNavLinks)
