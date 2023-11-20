@@ -5,9 +5,6 @@ import type { Theme } from 'vitepress'
 
 import { setSymbolStyle, replaceSymbol } from './plugins/symbol'
 import LNavLinks from './components/LNavLinks.vue'
-import Twikoo from './components/Twikoo.vue'
-import NavVisitor from './components/NavVisitor.vue';
-import DocFooter from './components/DocFooter.vue';
 import ZoomImg from './components/ZoomImg.vue'
 import Layout from './components/Layout.vue'
 import './styles/index.scss'

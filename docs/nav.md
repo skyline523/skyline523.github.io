@@ -3,8 +3,6 @@ layoutClass: m-nav-layout
 ---
 
 <script setup>
-import LNavLinks from './.vitepress/theme/components/LNavLinks.vue'
-
 import { NAV_DATA } from './.vitepress/theme/data/nav.ts'
 </script>
 

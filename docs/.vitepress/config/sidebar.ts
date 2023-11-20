@@ -1,34 +1,26 @@
 import { DefaultTheme } from 'vitepress'
 
-const dailySidebar = [
-  {
-    text: '随笔',
-    items: [
-      { text: '随便聊聊', link: '/daily/introduce' },
-      { text: 'Emojis', link: '/daily/emojis' },
-    ]
-  },
-  {
-    text: '草稿箱',
-    items: [
-      { text: '示例文章-1', link: '' }
-    ]
-  },
-  { text: '备忘录和快捷入口', link: '/daily/memo-and-quick-entry' }
-]
-
-const vitepressSidebar = [
-  {
-    text: 'VitePress',
-    items: [
-      { text: 'VitePress部署到Github', link: '/vitepress/deploy-to-github' },
-      { text: '文章目录添加自定义标识', link: '/vitepress/outline-symbol' },
-      { text: '文章图片缩放功能', link: '/vitepress/img-zoom' }
-    ]
-  }
-]
-
 export const sidebar: DefaultTheme.Sidebar = {
-  '/daily/': dailySidebar,
-  '/vitepress/': vitepressSidebar
+  '/articles/': [
+    {
+      text: 'VitePress',
+      items: [
+        { text: 'VitePress部署到Github', link: '/articles/vitepress/deploy-to-github' },
+        { text: '文章目录添加自定义标识', link: '/articles/vitepress/outline-symbol' },
+        { text: '文章图片缩放功能', link: '/articles/vitepress/img-zoom' }
+      ]
+    }
+  ],
+  '/workflow/': [],
+  '/notes/': [
+    {
+      text: '踩坑记录',
+      items: [
+        { text: 'UI库踩坑记录', link: '/notes/pit/step-pit-ui-library' }
+      ]
+    },
+    { text: 'Emojis😄', link: '/notes/emojis' },
+    { text: '随便聊聊', link: '/notes/introduce' },
+    { text: '备忘录和快捷入口', link: '/notes/memo-and-quick-entry' }
+  ]
 }

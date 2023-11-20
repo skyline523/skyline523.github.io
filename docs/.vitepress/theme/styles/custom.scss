@@ -23,3 +23,17 @@
   z-index: calc(var(--medium-zoom-z-index) + 1);
 }
 
+.m-friends-layout {
+  .container {
+    max-width: 1080px !important;
+  }
+  .content-container,
+  .content {
+    max-width: 100% !important;
+  }
+
+  .aside {
+    display: none !important;
+  }
+}
+

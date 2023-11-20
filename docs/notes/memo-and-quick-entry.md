@@ -60,14 +60,6 @@ export default defineConfig {
 
 ### 建站参考和灵感来源
 
-[Clark Cui](https://visionary-sunflower-dc7ae3.netlify.app/)
-
-[君惜](https://xinlei3166.github.io/)
-
-[iMaeGoo](https://www.imaegoo.com/)
-
-[茂茂物语](https://notes.fe-mm.com/)
-
 [Vue3 入门指南与实战案例](https://vue3.chengpeiquan.com/)
 
 [使用 VitePress 打造个人前端导航网站](https://juejin.cn/post/7204860462239498296)

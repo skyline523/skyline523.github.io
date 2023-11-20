@@ -1,14 +1,17 @@
-<script setup>
+<script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
 
 import Twikoo from './Twikoo.vue'
 import NavVisitor from './NavVisitor.vue';
+import { useData } from 'vitepress';
 
 const { Layout } = DefaultTheme
+
+const { frontmatter } = useData()
 </script>
 
 <template>
-  <Layout>
+  <Layout :class="frontmatter.value?.layoutClass">
     <template #nav-bar-title-after>
       <NavVisitor />
     </template>
