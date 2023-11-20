@@ -13,7 +13,7 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         items: [
-          { text: 'Workflow-1', link: '/notes/pit/step-pit-ui-library' }
+          { text: 'Workflow-1', link: '/workflow/example' }
         ]
       }
     ]
@@ -23,7 +23,7 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         items: [
-          { text: 'UI库踩坑记录', link: '/notes/pit/step-pit-ui-library' }
+          { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
         ]
       },
       {

@@ -11,12 +11,14 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     }
   ],
-  '/workflow/': [],
+  '/workflow/': [
+    { text: 'workflow-1', link: '/workflow/example' }
+  ],
   '/notes/': [
     {
       text: '踩坑记录',
       items: [
-        { text: 'UI库踩坑记录', link: '/notes/pit/step-pit-ui-library' }
+        { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
       ]
     },
     { text: 'Emojis😄', link: '/notes/emojis' },
