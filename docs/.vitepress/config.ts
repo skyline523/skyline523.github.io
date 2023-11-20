@@ -22,9 +22,9 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: '6PGK9MXEA4',
-        apiKey: 'ef97692dcfc55fe881fbf5690234574f',
-        indexName: 'leet-blog'
+        appId: 'LT9UAOSGET',
+        apiKey: 'bda63aff4042defec143aa31b2dab5f8',
+        indexName: 'skyline523io'
       }
     },
     editLink: {
