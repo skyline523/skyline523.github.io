@@ -11,12 +11,13 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@bassist/utils": "^0.14.0",
-    "medium-zoom": "^1.0.8"
+    "@bassist/utils": "^0.14.0"
   },
   "devDependencies": {
     "@mdit-vue/shared": "^1.0.0",
     "@types/node": "^20.9.0",
+    "feed": "^4.2.2",
+    "medium-zoom": "^1.0.8",
     "sass": "^1.69.5",
     "vitepress": "1.0.0-rc.25",
     "vue": "^3.3.8"

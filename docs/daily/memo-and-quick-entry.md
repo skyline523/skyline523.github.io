@@ -53,7 +53,8 @@ export default defineConfig {
 
 #### 添加 RSS
 
-[参考文章](https://laros.io/generating-an-rss-feed-with-vitepress)
+[参考文章 1](https://laros.io/generating-an-rss-feed-with-vitepress)
+[参考文章 2](https://chodocs.cn/program/vitepress-plugin/#%E6%96%87%E6%A1%A3%E6%94%AF%E6%8C%81-rss-%E8%AE%A2%E9%98%85)
 
 ## 快捷入口
 
