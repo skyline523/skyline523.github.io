@@ -1,5 +1,6 @@
 ---
 layoutClass: m-nav-layout
+date: 2023-11-15
 ---
 
 <script setup>

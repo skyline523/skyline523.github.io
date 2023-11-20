@@ -1,5 +1,6 @@
 ---
 layoutClass: m-friends-layout
+date: 2023-11-20
 ---
 
 <script setup>
