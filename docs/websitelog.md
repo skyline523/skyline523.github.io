@@ -44,3 +44,4 @@ date: 2023-11-20
 - 使用 Github Actions 自动化部署
 - 新增支持 RSS 订阅
 - 更新友链
+- 更改 Nav 和 Sidebar 内容

@@ -44,16 +44,11 @@ export default defineConfig {
 
 目前想到比较好玩的部分就是评论服务，给每篇文章底部加上评论，以及一个单独的评论页面。(我也不管有没有人会看我的网站。。。)，以我目前的水平是无法开发出这种东西的，太高看自己了，于是我找到了两个开源的评论服务。
 
-[waline](https://waline.js.org)  
-[twikoo](https://twikoo.js.org)
-
-#### 网站布局
-
-网站的布局暂时先这样，等我参考够了再来试试怎样的布局能让我自己赏心悦目 🙂。
+之后找时间自定义一下适合我自己网站的样式。
 
 #### 添加 RSS
 
-[参考文章 1](https://laros.io/generating-an-rss-feed-with-vitepress)
+[参考文章 1](https://laros.io/generating-an-rss-feed-with-vitepress)  
 [参考文章 2](https://chodocs.cn/program/vitepress-plugin/#%E6%96%87%E6%A1%A3%E6%94%AF%E6%8C%81-rss-%E8%AE%A2%E9%98%85)
 
 ## 快捷入口

@@ -25,4 +25,16 @@ export const friends: NavLink[] = [
     icon: 'https://xinlei3166.github.io/logo.png',
     desc: '技术文章、软件文档、日常随笔。'
   },
+  {
+    title: '琅環书生',
+    link: 'https://www.zhuangzhi.love',
+    icon: 'https://z1.ax1x.com/2023/10/20/piFQxN8.jpg',
+    desc: '无远弗届，皆有可能'
+  },
+  {
+    title: 'CHYT',
+    link: 'https://www.chyt.top/',
+    icon: 'https://q1.qlogo.cn/g?b=qq&nk=3223610600&s=100',
+    desc: '生活万物，唯爱小婷'
+  },
 ]
