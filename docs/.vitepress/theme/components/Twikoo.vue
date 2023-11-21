@@ -54,10 +54,6 @@ function onRoute (to) {
 onMounted(() => {
   initTwikoo()
   initJs()
-
-  addEventListener('click', (e) => {
-    console.log(e)
-  })
 })
 </script>
 
