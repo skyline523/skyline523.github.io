@@ -8,7 +8,7 @@ hero:
   text: '不要放弃自己的信念'
   tagline: 我会找到办法的，我总有办法
   image:
-    src: 'https://avatars.githubusercontent.com/u/76251617'
+    src: '/assets/logo.svg'
     alt: 'Leet'
   actions:
     - theme: brand

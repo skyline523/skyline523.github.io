@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import Twikoo from './Twikoo.vue'
 import NavVisitor from './NavVisitor.vue';
 import { useData } from 'vitepress';
+import NavLogo from './NavLogo.vue';
 
 const { Layout } = DefaultTheme
 
@@ -13,6 +14,7 @@ const { frontmatter } = useData()
 <template>
   <Layout :class="frontmatter.value?.layoutClass">
     <template #nav-bar-title-after>
+      <NavLogo />
       <NavVisitor />
     </template>
     <template #doc-after>

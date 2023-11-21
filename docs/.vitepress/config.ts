@@ -18,6 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav,
     sidebar,
+    siteTitle: '',
     outlineTitle: '目录',
     search: {
       provider: 'algolia',

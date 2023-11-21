@@ -117,7 +117,7 @@ const svg = computed(() => {
     position: absolute;
     padding: 0 8px;
     top: 2px;
-    right: 0;
+    right: 0px;
     transform: scale(.8);
     border-radius: 9999px;
   }

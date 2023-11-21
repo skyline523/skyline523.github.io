@@ -39,7 +39,13 @@ export const NAV_DATA: NavData[] = [
         title: 'shields.io',
         desc: '制作简洁、一致、易读的徽章',
         link: 'https://shields.io/'
-      }
+      },
+      {
+        icon: 'https://app.brandmark.io/favicon32.gif',
+        title: 'Brandmark',
+        desc: '自定义 logo 生成工具',
+        link: 'https://app.brandmark.io/v3/'
+      },
     ]
   },
   {

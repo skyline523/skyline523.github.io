@@ -5,13 +5,15 @@ export const friends: NavLink[] = [
     title: 'iMaeGoo\'s Blog',
     link: 'https://www.imaegoo.com/',
     icon: 'https://www.imaegoo.com/images/avatar.jpg',
-    desc: '虹墨空间站'
+    desc: '虹墨空间站',
+    tag: 'RSS'
   },
   {
     title: '辣椒の酱',
     link: 'https://removeif.github.io/',
     icon: 'https://removeif.github.io/images/avatar.jpg',
-    desc: '后端开发，技术分享'
+    desc: '后端开发，技术分享',
+    tag: 'RSS'
   },
   {
     title: '茂茂物语',
@@ -36,5 +38,12 @@ export const friends: NavLink[] = [
     link: 'https://www.chyt.top/',
     icon: 'https://q1.qlogo.cn/g?b=qq&nk=3223610600&s=100',
     desc: '生活万物，唯爱小婷'
+  },
+  {
+    title: 'ChoDocs',
+    link: 'https://chodocs.cn/',
+    icon: 'https://chodocs.cn/favicon.ico',
+    desc: '一站式前端内容网站，包括学习路线、知识体系',
+    tag: 'RSS'
   },
 ]
