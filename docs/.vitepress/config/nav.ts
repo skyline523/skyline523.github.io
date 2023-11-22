@@ -13,7 +13,7 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         items: [
-          { text: 'Workflow-1', link: '/workflow/example' }
+          { text: '编程规范', link: '/workflow/programming-standard' }
         ]
       }
     ]

@@ -12,7 +12,7 @@ export const sidebar: DefaultTheme.Sidebar = {
     }
   ],
   '/workflow/': [
-    { text: 'workflow-1', link: '/workflow/example' }
+    { text: '编程规范', link: '/workflow/programming-standard' }
   ],
   '/notes/': [
     {
