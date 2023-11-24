@@ -9,11 +9,13 @@ import { genFeed } from './plugins/genFeed'
 export default defineConfig({
   lang: 'zh-CN',
   title: "Leet",
+
   description: "Leet' Blog，包含前端常用知识、学习记录笔记、工具分享等",
   head,
   markdown: {
     lineNumbers: true
   },
+  appearance: 'dark',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,

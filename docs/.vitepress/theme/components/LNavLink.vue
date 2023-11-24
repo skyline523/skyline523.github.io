@@ -44,7 +44,7 @@ const svg = computed(() => {
 .m-nav-link {
   position: relative;
   display: block;
-  border: 1px solid var(--vp-c-bg-alt);
+  border: 1px solid transparent;
   background-color: var(--vp-c-bg-alt);
   border-radius: 8px;
   text-decoration: inherit;
@@ -53,7 +53,7 @@ const svg = computed(() => {
   transition: all 0.3s;
   &:hover {
     background-color: var(--vp-c-bg);
-    border-color: var(--vp-c-neutral);
+    border-color: var(--vp-c-brand-1);
     box-shadow: var(--vp-shadow-2);
   }
 
