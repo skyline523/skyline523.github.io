@@ -21,11 +21,11 @@ outline: deep
 
 - 打开仓库设置
 
-<ZoomImg src='/assets/vitepress/deploy-to-github/github-repo.png' desc='仓库设置' />
+<ZoomImg src='/assets/articles/vitepress/github-repo.png' desc='仓库设置' />
 
 - 一般使用默认设置即可，可能分支需要切换，以及如果自己有域名可以填上。
 
-<ZoomImg src='/assets/vitepress/deploy-to-github/repo-setting.png' desc='仓库设置' />
+<ZoomImg src='/assets/articles/vitepress/repo-setting.png' desc='仓库设置' />
 
 正常情况下等待几分钟，就部署好了。[skyline523.github.io/](https://skyline523.github.io/)
 

@@ -85,7 +85,7 @@ const theme: Theme = {
 
 这个时候其实已经可以正常使用了，但是你会发现你放大后的图片可能会出现这种情况：
 
-<ZoomImg src="/assets/vitepress/img-zoom/zoom-bug.png" desc="放大图片后的问题" />
+<ZoomImg src="/assets/articles/vitepress/zoom-bug.png" desc="放大图片后的问题" />
 
 由于层级问题，图片有一部分被挡住了，而且遮罩层也没有样式。这需要我们手动为对应的类名加上层级样式才能解决：
 
@@ -135,4 +135,4 @@ const theme: Theme = {
 
 这样图片组件的样式看起来就舒服多了：
 
-<ZoomImg src="/assets/vitepress/img-zoom/zoom-img-component.png" desc="图片样式效果" />
+<ZoomImg src="/assets/articles/vitepress/zoom-img-component.png" desc="图片样式效果" />
