@@ -4,16 +4,7 @@
   scroll-behavior: smooth;
 }
 
-.vp-doc p,
-.vp-doc li + li {
-  text-align: justify;
-}
 
-.VPHero .image-bg {
-  z-index: 1;
-  opacity: .8;
-  transition: opacity 1s ease;
-}
 
 .medium-zoom-overlay {
   z-index: var(--medium-zoom-z-index);

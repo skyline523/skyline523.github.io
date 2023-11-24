@@ -1,0 +1,12 @@
+/***** vitepress 样式覆盖 ******/
+
+.vp-doc p,
+.vp-doc li + li {
+  text-align: justify;
+}
+
+.VPHero .image-bg {
+  z-index: 1;
+  opacity: .8;
+  transition: opacity 1s ease;
+}
