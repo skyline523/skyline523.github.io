@@ -12,7 +12,13 @@ export const sidebar: DefaultTheme.Sidebar = {
     }
   ],
   '/workflow/': [
-    { text: '编程规范', link: '/workflow/programming-standard' }
+    { text: '编程规范', link: '/workflow/programming-standard' },
+    {
+      items: [
+        { text: 'Emojis😄', link: '/workflow/emojis' },
+      ]
+    }
+
   ],
   '/notes/': [
     {
@@ -21,7 +27,6 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
       ]
     },
-    { text: 'Emojis😄', link: '/notes/emojis' },
     { text: '随便聊聊', link: '/notes/introduce' },
     { text: '备忘录和快捷入口', link: '/notes/memo-and-quick-entry' }
   ]

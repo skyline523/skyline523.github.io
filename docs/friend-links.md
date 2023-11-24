@@ -20,5 +20,5 @@ import { friends } from './.vitepress/theme/data/friends.ts'
 本站友链信息如下：  
 名称：Leet  
 链接：https://skyline523.github.io/  
-图片：https://avatars.githubusercontent.com/u/76251617?v=4  
+图片：https://skyline523.github.io/assets/logo.svg  
 描述：我会找到办法的，我总有办法

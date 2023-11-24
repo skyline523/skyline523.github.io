@@ -46,6 +46,12 @@ export const NAV_DATA: NavData[] = [
         desc: '自定义 logo 生成工具',
         link: 'https://app.brandmark.io/v3/'
       },
+      {
+        icon: 'https://icon-sets.iconify.design/favicon@32.png',
+        title: 'iconify',
+        desc: '所有流行的图标库，一个框架',
+        link: 'https://icon-sets.iconify.design/'
+      },
     ]
   },
   {

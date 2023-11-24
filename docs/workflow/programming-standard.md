@@ -71,7 +71,7 @@ date: 2023-11-22
 1. **Block**
 
 <ZoomImg
-  src="https://i.imgur.com/LwiDMYv.png"
+  src="/assets/workflow/programming-standard/css-block.png"
   desc="图片来源：https://en.bem.info/methodology/key-concepts/"
 />
 
@@ -93,7 +93,7 @@ Block 之间可以相互嵌入
 2. **_Element_**
 
 <ZoomImg
-  src="https://i.imgur.com/TQDOGw2.png"
+  src="/assets/workflow/programming-standard/css-element.png"
   desc="图片来源：https://en.bem.info/methodology/key-concepts/"
 />
 
@@ -108,7 +108,7 @@ _选择器的特色和命名_
 3. **_Modifier_**
 
 <ZoomImg
-  src="https://i.imgur.com/yziJLXZ.png"
+  src="/assets/workflow/programming-standard/css-modifier.png"
   desc="图片来源：https://en.bem.info/methodology/key-concepts/"
 />
 
@@ -133,6 +133,59 @@ _选择器的特色和命名_
 
   <div class="btn--primary btn--danger btn--outline"></div>
 </div>
+```
+
+**_个人习惯命名_**
+
+BEM 的好处就是足够规范，在团队中使用能更有效的阅读代码。但是对于较小团队或者个人而言，BEM 的优势就没有那么大了，反而会影响开发速度。所以我是通过个人习惯简化 BEM 的规范而得出的个人习惯命名。
+
+对于`Block` `Element`就没有那么多要求。就是除了`Modifier`之外，其他的部分都是通过单下划线连接，多个单词用单短横线连接，`Modifier`还是遵循 BEM 使用双短横线连接。
+
+```css
+.sidebar_title {
+}
+
+.user-form_label {
+}
+
+.user-form_label--error {
+}
+```
+
+## 项目结构
+
+> 约定 > 配置
+
+```sh
+.
+├── .vscode                           # VSCode 配置文件
+├── public                            # 网站资源文件（favicon.ico index.html 等）
+├── scripts                           # 脚本相关
+├── src
+│   ├── apis                          # api 接口
+│   ├── assets                        # 静态资源
+│   ├── components                    # 全局组件
+│   ├── config                        # 项目配置文件
+│   ├── constants                     # 常量
+│   ├── hooks                         # 通用 hooks
+│   ├── layout                        # 页面整体布局
+│   ├── lib                           # 第三方或无业务依赖代码
+│   ├── locales                       # i18n
+│   ├── pages                         # 页面相关文件
+│   │   ├── Home                      # 大驼峰规范 => 组件即是一个构造函数
+│   │   │   ├── components            # 页面相关的子组件
+│   │   │   ├── index.module.scss     # 根据应用的 CSS Scope 方案命名
+│   │   │   └── index.tsx             # index 作为默认路径，视为根节点
+│   │   └── App.tsx                   # 页面入口
+│   ├── router                        # 页面路由
+│   ├── store                         # 状态管理
+│   ├── styles                        # 全局/基础样式
+│   ├── types                         # TypeScript 类型声明
+│   ├── utils                         # 工具函数
+│   └── main.tsx                      # 应用启动入口
+├── README.md                         # 当前项目的文档
+├── package.json                      # 项目信息
+└── tsconfig.json                     # TypeScript 配置文件
 ```
 
 ## 参考资料
