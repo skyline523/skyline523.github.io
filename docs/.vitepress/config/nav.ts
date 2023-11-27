@@ -17,6 +17,13 @@ export const nav: DefaultTheme.NavItem[] = [
         ]
       },
       {
+        text: '项目框架搭建',
+        items: [
+          { text: 'Vue Admin框架搭建 - 1', link: '/workflow/vue-dashboard-template-1' },
+          { text: 'Vue Admin框架搭建 - 2', link: '/workflow/vue-dashboard-template-2' },
+        ]
+      },
+      {
         items: [
           { text: 'Emojis', link: '/workflow/emojis' },
         ]
