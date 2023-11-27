@@ -394,6 +394,58 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
+    title: "Node",
+    items: [
+      {
+        icon: 'https://nodejs.org/static/images/favicons/favicon.png',
+        title: 'Node.js',
+        desc: 'Node.js® 是一个开源、跨平台的 JavaScript 运行时环境',
+        link: 'https://nodejs.org/en/'
+      },
+      {
+        icon: 'https://expressjs.com/images/favicon.png',
+        title: 'Express.js',
+        desc: '基于 Node.js 平台，快速、开放、极简的 Web 开发框架',
+        link: 'https://expressjs.com'
+      },
+      {
+        icon: 'https://notes.fe-mm.com/icons/koa.svg',
+        title: 'Koa.js',
+        desc: '基于 Node.js 平台的下一代 web 开发框架',
+        link: 'https://koajs.com'
+      },
+      {
+        icon: 'https://www.eggjs.org/favicon.png',
+        title: 'Egg.js',
+        desc: '为企业级框架和应用而生',
+        link: 'https://www.eggjs.org/zh-CN'
+      },
+      {
+        icon: 'https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg',
+        title: 'Nest.js 中文文档',
+        desc: '用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架',
+        link: 'https://docs.nestjs.cn'
+      }
+    ]
+  },
+  {
+    title: 'Rust',
+    items: [
+      {
+        icon: 'https://www.rust-lang.org/static/images/favicon-32x32.png',
+        title: 'Rust',
+        desc: '一门赋予每个人构建可靠且高效软件能力的语言',
+        link: 'https://www.rust-lang.org/zh-CN/'
+      },
+      {
+        icon: 'https://course.rs/favicon.svg',
+        title: 'Rust 语言圣经',
+        desc: 'Rust 语言圣经',
+        link: 'https://course.rs/'
+      },
+    ]
+  },
+  {
     title: '社区',
     items: [
       {
