@@ -188,6 +188,46 @@ BEM 的好处就是足够规范，在团队中使用能更有效的阅读代码�
 └── tsconfig.json                     # TypeScript 配置文件
 ```
 
+## 引入规范 ~new
+
+不管是 vue 还是 react 组件中，还是写业务的文件中，都避免不了要使用其他库的东西或者是自己写的工具等等。这些不同功能的文件引入如果没有规范，看起来也会非常难受。
+
+```js
+// bad
+import { ref } from 'vue'
+import { api } from '@/api'
+import { useRequest } from '@vueuse/core'
+import { useRouter } from 'vue-router'
+import { request } from '@/utils/request'
+import { Button } from 'Element-plus'
+import { useUserStore } from '@/store/modules/user'
+import '@/styles/index.scss'
+import Sidebar from '@/components/Sidebar.vue'
+
+// good
+// third library
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useRequest } from '@vueuse/core'
+
+// api, util
+import { api } from '@/api'
+import { useUserStore } from '@/store/modules/user'
+
+// components
+import { Button } from 'Element-plus'
+import Sidebar from '@/components/Sidebar.vue'
+
+// assets, style
+import '@/styles/index.scss'
+```
+
+::: tip
+在上面你会注意到`import { Button } from 'Element-plus'`这个即是第三方库又是组件，这时就应该按更细的分类给它分类。在每个块都可能有这种情况，但是遵循第三方库 > 本地即可。
+
+如果在同一个文件引入超过 3 个方法(或者变量、组件等)应该分行书写。
+:::
+
 ## 参考资料
 
 [编程规范](https://notes.fe-mm.com/workflow/style-guide)  
