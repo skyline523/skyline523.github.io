@@ -190,7 +190,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         icon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
-        title: 'Remix',
+        title: 'Umi.js',
         desc: '专注于网络标准和现代网络应用 UX，您只需构建更好的网站',
         link: 'https://umijs.org/'
       },
@@ -442,6 +442,41 @@ export const NAV_DATA: NavData[] = [
         title: 'Rust 语言圣经',
         desc: 'Rust 语言圣经',
         link: 'https://course.rs/'
+      },
+    ]
+  },
+  {
+    title: '在线 IDE',
+    items: [
+      {
+        icon: 'https://codesandbox.io/new/favicon.svg',
+        title: 'CodeSandBox',
+        desc: 'Instant Cloud-Based IDE',
+        link: 'https://codesandbox.io/'
+      },
+      {
+        icon: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico',
+        title: 'CodePen',
+        desc: '在线代码编辑器',
+        link: 'https://codepen.io/trending'
+      },
+      {
+        icon: 'https://c.staticblitz.com/assets/favicon_sb-148f9e9aced4a6363b4a8232686c3d8998d3eabaab1a06385fd3f1996baf3a3e.png',
+        title: 'StackBlitz',
+        desc: 'Instant Dev Environments | Click. Code. Done.',
+        link: 'https://stackblitz.com/'
+      },
+      {
+        icon: 'https://jsfiddle.net/img/favicon.png',
+        title: 'JsFiddle',
+        desc: '在线测试您的 JavaScript、CSS、HTML 或 CoffeeScript',
+        link: 'https://jsfiddle.net/'
+      },
+      {
+        icon: 'https://tailwindcss.com/favicons/favicon-32x32.png?v=3',
+        title: 'tailwind PLAY',
+        desc: '在线 tailwindcss',
+        link: 'https://play.tailwindcss.com/'
       },
     ]
   },
