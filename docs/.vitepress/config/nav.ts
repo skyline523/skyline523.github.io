@@ -14,13 +14,7 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         items: [
           { text: '编程规范', link: '/workflow/programming-standard' },
-        ]
-      },
-      {
-        text: '项目框架搭建',
-        items: [
-          { text: 'Vue Admin框架搭建 - 1', link: '/workflow/vue-dashboard-template-1' },
-          { text: 'Vue Admin框架搭建 - 2', link: '/workflow/vue-dashboard-template-2' },
+          { text: '规范项目代码', link: '/workflow/code-and-style-standard' },
         ]
       },
       {

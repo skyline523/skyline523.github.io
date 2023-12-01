@@ -3,14 +3,16 @@ outline: deep
 date: 2023-11-27
 ---
 
-# Vue Admin 项目框架 - 1
+# 统一代码风格和规范项目代码
 
+本来是想着搭个完整的项目框架的，记录完规范这节后，代码那些配置就已经懒得更新了。心想着那些东西新建项目的时候，脚手架都会弄好。索性就把之前的第二节停掉删了，只留下这一节。因为我当初新建一个项目时，这些规范我也不知道怎么搞，记录以下以后也能参考参考。
+
+::: details 这是之前本来想记录整个项目搭建的前言
 在公司每次有新项目时，我都得重新搭建项目框架。并且后端的一般也是复用在新项目中，例如登录授权以及返回数据格式基本上每个项目都是一样的。所以决定还是搭建一个项目框架(其实是两个，一个 Admin、一个 Mobile)，一劳永逸！
 
 由于文章太长所以分为两篇文章，第一篇是配置规范化，第二篇是配置对应必要的库和初始化代码
 
-::: tip
-本片文章只记录 admin 的搭建，mobile 类似于 admin，就不再重复记录一遍搭建过程
+啪啪打脸了。
 :::
 
 ## 介绍
@@ -28,7 +30,7 @@ date: 2023-11-27
 ## 创建项目
 
 <ZoomImg
-  src='/assets/workflow/vue-dashboard-template/init-vite.png'
+  src='/assets/workflow/code-and-style-standard/init-vite.png'
   desc="创建项目"
 />
 
@@ -50,7 +52,7 @@ pnpm eslint --init
 <br />
 
 <ZoomImg
-  src='/assets/workflow/vue-dashboard-template/init-eslint.png'
+  src='/assets/workflow/code-and-style-standard/init-eslint.png'
   desc="初始化ESLint"
 />
 
