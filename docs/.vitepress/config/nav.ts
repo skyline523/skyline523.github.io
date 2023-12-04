@@ -24,6 +24,11 @@ export const nav: DefaultTheme.NavItem[] = [
       },
       {
         items: [
+          { text: 'TypeScript', link: '/workflow/typescript' },
+        ]
+      },
+      {
+        items: [
           { text: 'Emojis', link: '/workflow/emojis' },
         ]
       }

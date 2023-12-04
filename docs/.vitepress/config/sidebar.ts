@@ -25,6 +25,12 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '工具库', link: '/workflow/tool-libraries' },
       ]
     },
+    {
+      text: 'TypeScript',
+      items: [
+        { text: '知识点和工具', link: '/workflow/typescript' },
+      ]
+    },
     { text: 'Emojis😄', link: '/workflow/emojis' },
 
   ],

@@ -1,5 +1,4 @@
 ---
-outline: deep
 date: 2023-12-04
 ---
 
