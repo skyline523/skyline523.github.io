@@ -19,6 +19,12 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '规范项目代码', link: '/workflow/code-and-style-standard' },
       ]
     },
+    {
+      text: '常用工具',
+      items: [
+        { text: '工具库', link: '/workflow/tool-libraries' },
+      ]
+    },
     { text: 'Emojis😄', link: '/workflow/emojis' },
 
   ],

@@ -19,6 +19,11 @@ export const nav: DefaultTheme.NavItem[] = [
       },
       {
         items: [
+          { text: '常用工具', link: '/workflow/tool-libraries' },
+        ]
+      },
+      {
+        items: [
           { text: 'Emojis', link: '/workflow/emojis' },
         ]
       }

@@ -1,6 +1,6 @@
 .m-nav-layout {
   /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
-  --vp-layout-max-width: 1440px;
+  --vp-layout-max-width: 1600px;
 
   /* layout 样式 */
   .container {
@@ -33,5 +33,11 @@
 
   .vp-doc h2 {
     margin-top: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .content-container.content-container {
+    max-width: 100%;
   }
 }

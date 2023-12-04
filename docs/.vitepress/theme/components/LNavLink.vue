@@ -95,7 +95,6 @@ const svg = computed(() => {
     flex-grow: 1;
     white-space: nowrap;
     text-overflow: ellipsis;
-    line-height: 48px;
     font-size: 16px;
     font-weight: 600;
   }
