@@ -6,6 +6,11 @@ export const nav: DefaultTheme.NavItem[] = [
     text: '文章',
     items: [
       { text: 'VitePress', link: '/articles/vitepress/deploy-to-github' },
+      {
+        items: [
+          { text: 'TypeScript 类型验算', link: '/articles/typescript/calculate' },
+        ]
+      },
     ],
   },
   {
@@ -20,11 +25,6 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         items: [
           { text: '常用工具', link: '/workflow/tool-libraries' },
-        ]
-      },
-      {
-        items: [
-          { text: 'TypeScript', link: '/workflow/typescript' },
         ]
       },
       {

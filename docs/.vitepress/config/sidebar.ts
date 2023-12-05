@@ -9,7 +9,13 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '文章目录添加自定义标识', link: '/articles/vitepress/outline-symbol' },
         { text: '文章图片缩放功能', link: '/articles/vitepress/img-zoom' }
       ]
-    }
+    },
+    {
+      text: 'TypeScript',
+      items: [
+        { text: '类型验算', link: '/articles/typescript/calculate' },
+      ]
+    },
   ],
   '/workflow/': [
     {
@@ -23,12 +29,6 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '常用工具',
       items: [
         { text: '工具库', link: '/workflow/tool-libraries' },
-      ]
-    },
-    {
-      text: 'TypeScript',
-      items: [
-        { text: '知识点和工具', link: '/workflow/typescript' },
       ]
     },
     { text: 'Emojis😄', link: '/workflow/emojis' },
