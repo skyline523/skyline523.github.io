@@ -46,4 +46,31 @@ export const friends: NavLink[] = [
     desc: '一站式前端内容网站，包括学习路线、知识体系',
     tag: 'RSS'
   },
+  {
+    title: 'qxdn',
+    link: 'https://qianxu.run',
+    icon: 'https://qianxu.run/images/avatar.jpg',
+    desc: '蓬生麻中，不扶自直',
+    tag: 'RSS'
+  },
+  {
+    title: '飞鸟',
+    link: 'https://lzxjack.top',
+    icon: 'https://img.lzxjack.top:99/202203302154224.webp',
+    desc: '一只平凡的鸟罢了。',
+  },
+  {
+    title: '满心记',
+    link: 'https://blog.lovelu.top/',
+    icon: 'https://bu.dusays.com/2023/01/29/63d5bf7fa0d2c.png',
+    desc: '追求让人充实，分享让人快乐',
+    tag: 'RSS'
+  },
+  {
+    title: '张洪Heo',
+    link: 'https://blog.zhheo.com/',
+    icon: 'https://bu.dusays.com/2022/12/28/63ac2812183aa.png',
+    desc: '分享设计与科技生活',
+    tag: 'RSS'
+  },
 ]
