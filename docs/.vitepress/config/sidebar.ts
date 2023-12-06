@@ -41,7 +41,14 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
       ]
     },
-    { text: '随便聊聊', link: '/notes/introduce' },
-    { text: '备忘录和快捷入口', link: '/notes/memo-and-quick-entry' }
+    { text: '阅读须知', link: '/notes/guide' },
+    { text: '建站历程', link: '/notes/site-process' },
+    { text: '备忘录', link: '/notes/memo' },
+    {
+      items: [
+        { text: '留言', link: '/notes/comment' }
+      ]
+    },
+
   ]
 }

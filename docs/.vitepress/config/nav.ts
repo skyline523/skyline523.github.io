@@ -44,7 +44,8 @@ export const nav: DefaultTheme.NavItem[] = [
       },
       {
         items: [
-          { text: '随笔', link: '/notes/memo-and-quick-entry' }
+          { text: '随笔', link: '/notes/guide' },
+          { text: '留言', link: '/notes/comment' },
         ]
       }
     ]
