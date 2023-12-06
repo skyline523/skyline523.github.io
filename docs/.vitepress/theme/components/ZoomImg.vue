@@ -1,6 +1,6 @@
 <template>
   <div class="img-wrap">
-    <img ref="imgRef" :src="withBase(src)" :alt="desc">
+    <img ref="imgRef" :src="withBase(src)" :alt="desc" loading="lazy">
     <span>{{ desc }}</span>
   </div>
 </template>
