@@ -16,6 +16,12 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '类型验算', link: '/articles/typescript/calculate' },
       ]
     },
+    {
+      text: '前端工程化',
+      items: [
+        { text: '模块化', link: '/articles/engineering/module' },
+      ]
+    },
   ],
   '/workflow/': [
     {
