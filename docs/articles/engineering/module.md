@@ -24,7 +24,7 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 首先，JavaScript 有两种源文件，一种叫脚本(script)，一种叫模块(module)。这个区分是从 ES6 引入了模块机制后开始的，在 ES5 和之前的版本中，只有一种源文件类型：脚本。
 
-脚本可以是浏览器或者 nde 环境引入执行的，而模块只能由 JavaScript 代码用 import 引入执行。
+脚本可以是浏览器或者 node 环境引入执行的，而模块只能由 JavaScript 代码用 import 引入执行。
 
 > 这里只说了`import`一种引入方式，后面会在介绍[模块化规范](/articles/engineering/module#模块化规范)时讲解。
 
