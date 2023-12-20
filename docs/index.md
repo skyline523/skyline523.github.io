@@ -31,7 +31,7 @@ features:
   - icon: ✏️
     title: 随笔
     details: 随便聊聊和编程没多大关系的事
-    link: /notes/memo-and-quick-entry
+    link: /notes/guide
 ---
 
 <style>

@@ -15,6 +15,7 @@ export const nav: DefaultTheme.NavItem[] = [
         text: '前端工程化',
         items: [
           { text: '模块化', link: '/articles/engineering/module' },
+          { text: '包管理器', link: '/articles/engineering/package-manager' },
         ]
       },
     ],

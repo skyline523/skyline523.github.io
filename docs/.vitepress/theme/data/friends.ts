@@ -60,13 +60,6 @@ export const friends: NavLink[] = [
     desc: '一只平凡的鸟罢了。',
   },
   {
-    title: '满心记',
-    link: 'https://blog.lovelu.top/',
-    icon: 'https://bu.dusays.com/2023/01/29/63d5bf7fa0d2c.png',
-    desc: '追求让人充实，分享让人快乐',
-    tag: 'RSS'
-  },
-  {
     title: '张洪Heo',
     link: 'https://blog.zhheo.com/',
     icon: 'https://bu.dusays.com/2022/12/28/63ac2812183aa.png',
