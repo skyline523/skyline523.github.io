@@ -86,7 +86,7 @@ date: 2023-12-20
 }
 ```
 
-#### 依赖配置
+### 依赖配置
 
 我们的项目可能会依赖其他多个外部依赖包，根据依赖包的不同途径可分为以下几个:
 
@@ -96,7 +96,7 @@ date: 2023-12-20
 - bundleDependencies
 - optionalDependencies
 
-##### 配置规则
+#### 配置规则
 
 你看到的依赖包配置可能有以下几种情况：
 
@@ -139,7 +139,7 @@ date: 2023-12-20
 
 :::
 
-##### `dependencies`
+#### `dependencies`
 
 `dependencies`字段指定了项目运行所需依赖的模块。安装依赖是使用`--save`参数可将该模块写入到 dependencies 属性，安装依赖是默认安装到 dependencies，故可不用添加该参数。
 
@@ -159,9 +159,9 @@ date: 2023-12-20
 
 :::
 
-##### `devDependencies`
+#### `devDependencies`
 
-`devDependencies`字段指定了项目开发所需依赖的模块。有一些包有可能你只是在开发环境中用到，例如你用于检测代码规范的 `​eslint​​`​ ,用于进行测试的 ​`​vitest`。用户不安装这些依赖也能正常运行项目。​
+`devDependencies`字段指定了项目开发所需依赖的模块。有一些包有可能你只是在开发环境中用到，例如你用于检测代码规范的 `​eslint​​`​ ,用于进行测试的 ​`​vitest`。用户不安装这些依赖也能正常运行项目。​ 安装依赖是使用`--save-dev`或`-D`参数可将该模块写入到 dependencies 属性
 
 ```json
 "devDependencies": {
@@ -170,6 +170,266 @@ date: 2023-12-20
 }
 ```
 
-##### `peerDependencies`
+#### `peerDependencies` ~new
 
-当我们开发一个模块的时候，如果当前模块与所依赖的模块同时依赖一个第三方模块，并且依赖的是两个不兼容的版本时就会出现问题。`peerDependencies`用于指定你正在开发的模块所依赖的版本以及用户安装的依赖包版本的兼容性。
+当我们开发一个模块的时候，如果当前模块与所依赖的模块同时依赖一个第三方模块，并且依赖的是两个不兼容的版本时就会出现问题。`peerDependencies`用于指定你正在开发的模块所依赖的版本以及用户安装的依赖包版本的兼容性。这部分虽然平时开发项目不常用，但开发需要发布的 npm 包可能需要用上，而且并不太好理解。
+
+它的几个作用点：
+
+- 插件正确运行的前提是，核心依赖库必须先下载安装，不能脱离核心依赖库而被单独依赖并引用
+- 插件入口 api 的设计必须要符合核心依赖库的规范
+- 插件的核心逻辑运行在依赖库的调用中
+- 在项目实践中，同一插件体系下，核心依赖库版本最好是相同的
+
+假设现在有一个`工程A`，已经在其`package.json`的`dependencies`中声明了`packageA`， 有两个插件`插件1`和`插件2`他们也依赖`packageA`，如果在插件中使用`dependencies`而不是`peerDependencies`来声明`packageA`，那么在安装完依赖后的依赖图是这样的：
+
+```
+├── 工程A
+│   └── node_modules
+│       ├── packageA
+│       ├── 插件1
+│       │   └── nodule_modules
+│       │       └── packageA
+│       └── 插件2
+│       │   └── nodule_modules
+│       │       └── packageA
+```
+
+显而易见，`packageA`安装了三次，有两次安装是冗余的。
+
+如果使用`peerDependencies`来声明`插件1`和`插件2`的依赖:
+
+```json
+{
+  "peerDependencies": {
+    "packageA": "1.0.1"
+  }
+}
+```
+
+那么在安装完依赖后的依赖图是这样的：
+
+```
+├── 工程A
+│   └── node_modules
+│       ├── packageA
+│       ├── 插件1
+│       └── 插件2
+```
+
+- 如果用户显式依赖了核心库，则可以忽略各插件的 `peerDependency` 声明
+- 如果用户没有显式依赖核心库，则按照插件 `peerDependencies` 中声明的版本将库安装到项目根目录中
+- 当用户依赖的版本、各插件依赖的版本之间不相互兼容，会报错让用户自行修复
+
+#### `optionalDependencies` ~new
+
+在某些场景下，依赖包可能不是强依赖，这个依赖包可有可无，当这个依赖包无法被获取时，你希望`npm install`继续运行，而不会导致失败，你可以将依赖放到`optionalDependencies`中。
+
+::: tip
+`optionalDependencies`中的配置将会覆盖掉`dependencies`，所以只需在一个地方进行配置
+
+引用了`optionalDependencies`中安装的依赖时，需要做好异常处理，否者在模块获取不到时会报错
+:::
+
+#### `bundledDependencies` ~new
+
+`​bundledDependencies`​​ 的值是一个数组，数组里可以指定一些模块，这些模块将在这个包发布时被一起打包。
+
+```json
+"bundledDependencies": ["package1" , "package2"]
+```
+
+### 协议 ~new
+
+```json
+{
+  "license": "MIT"
+}
+```
+
+`license`​ 字段用于指定软件的开源协议，开源协议里面详尽表述了其他人获得你代码后拥有的权利，可以对你的的代码进行何种操作，何种操作又是被禁止的。同一款协议有很多变种，协议太宽松会导致作者丧失对作品的很多权利，太严格又不便于使用者使用及作品的传播，所以开源作者要考虑自己对作品想保留哪些权利，放开哪些限制。
+
+> 软件协议可分为开源和商业两类，对于商业协议，或者叫法律声明、许可协议，每个软件会有自己的一套行文，由软件作者或专门律师撰写，对于大多数人来说不必自己花时间和精力去写繁长的许可协议，选择一份广为流传的开源协议就是个不错的选择。
+
+- `MIT` 只要用户在项目副本中包含了版权声明和许可声明，他们就可以拿你的代码做任何想做的事情，你也无需承担任何责任
+- `Apache` 类似于 ​`​MIT​`​，同时还包含了贡献者向用户提供专利授权相关的条款
+- `GPL` 修改项目代码的用户再次分发源码或二进制代码时，必须公布他的相关修改
+
+### 目录、文件相关 ~new
+
+#### `main`
+
+```json
+{
+  "main": "lib/index.js"
+}
+```
+
+`main`可以指定程序的主入口文件，例如`element-plus`的模块入口是`lib/index.js`，当我们引入`import { el-button } from 'element-plus`，实际上就是`lib/index.js`中暴露出去的模块。
+
+#### `bin`
+
+许多`package`都有一个或多个可执行文件，它们希望将其安装到 `PATH` 中。npm 使这变得非常简单（事实上，它使用此功能来安装“npm”可执行文件。）
+
+要使用它，请在 `package.json` 中提供一个 `bin` 字段，它是命令名到本地文件名的映射。当此软件包全局安装时，该文件将链接到全局 bins 目录内，或者将创建一个 cmd（Windows 命令文件）来执行 `bin` 字段中的指定文件，因此可以按`name`或`name.cmd`（在 Windows PowerShell 上）运行。当此包作为另一个包中的依赖项安装时，该文件将被链接到该包可以直接通过 `npm exec` 或通过 `npm run-script` 调用其他脚本时通过名称来访问该文件。
+
+```json
+{
+  "bin": {
+    "myapp": "./cli.js"
+  }
+}
+```
+
+因此，当您安装 myapp 时，如果是类 Unix 操作系统，它将创建一个从 cli.js 脚本到 `/usr/local/bin/myapp` 的符号链接，如果是 Windows，它将创建一个 cmd 文件，通常位于 `C:\Users\{username}\AppData\Roaming\npm\myapp.cmd` 运行 cli.js 脚本。
+
+如果您有一个可执行文件，并且其名称应该是包的名称，那么您可以将其作为字符串提供。例如：
+
+```json
+{
+  "name": "my-program",
+  "version": "1.2.5",
+  "bin": "./path/to/program"
+}
+
+// 等同于
+{
+  "name": "my-program",
+  "version": "1.2.5",
+  "bin": {
+    "my-program": "./path/to/program"
+  }
+}
+```
+
+请确保 `bin` 中引用的文件以 `#!/usr/bin/env` 节点开头，否则脚本将在没有节点可执行文件的情况下启动！
+
+#### `files`
+
+```json
+{
+  "files": ["dist", "lib", "es"]
+}
+```
+
+可选`files`字段是一个数组，描述当您的包作为依赖项`​npm publish`推送到`npm`服务器文件列表。`files`遵循与 .gitignore 类似的语法，但相反：包含文件、目录或 glob 模式（_、\*\*/_ 等）将使文件在打包时包含在 tarball 中。省略该字段将使其默认为 ["*"]，这意味着它将包含所有文件。
+
+一些特殊的文件和目录也会被包含或排除，无论它们是否存在于文件数组中（见下文）。
+
+您还可以在包的根目录或子目录中提供 .npmignore 文件，这将防止包含文件。在包的根目录中，它不会覆盖“文件”字段，但在子目录中它会覆盖。 .npmignore 文件的工作方式与 .gitignore 类似。如果存在 .gitignore 文件，并且缺少 .npmignore，则将使用 .gitignore 的内容。
+
+始终包含的文件:
+
+- `package.json`
+- `README`
+- `LICENSE` / `LICENCE`
+- The file in the "main" field
+- The file(s) in the "bin" field
+
+始终不包含的文件:
+
+- \*.orig
+- .\*.swp
+- .DS_Store
+- .\_\*
+- .git
+- .npmrc
+- .hg
+- .lock-wscript
+- .npmrc
+- .svn
+- .wafpickle-N
+- CVS
+- config.gypi
+- node_modules
+- npm-debug.log
+- package-lock.json (如果你希望发布，请使用`npm-shrinkwrap.json`)
+- pnpm-lock.yaml
+- yarn.lock
+
+#### `man`
+
+`​​man​​​` 命令是 ​​Linux​​​ 下的帮助指令，通过 `​​man​​​` 指令可以查看 ​​Linux​​ 中的指令帮助、配置文件帮助和编程帮助等信息。
+
+> 这个配置在通常开发下使用较少，不过多赘述，可以前往 [npm pacakge.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#man) 查看文档
+
+#### `directories`
+
+CommonJS 规范详细介绍了几种使用目录对象指示包结构的方法。如果你查看 npm 的 package.json，你会发现它有 doc、lib 和 man 目录。
+
+将来，这些信息可能会以其他创造性的方式使用。
+
+> 目前作用不大也不过多赘述
+
+### 脚本配置 ~new
+
+#### `scripts`
+
+package.json 文件的`scripts`属性支持许多内置脚本及其预设生命周期事件以及任意脚本。这些都可以通过运行 `npm run-script <stage>` 或简称 `npm run <stage>` 来执行。具有匹配名称的前置和后置命令也将为这些命令运行（例如 premyscript、myscript、postmyscript）。依赖项中的脚本可以使用 `npm explore <pkg> -- npm run <stage>` 运行。
+
+```json
+{
+  "scripts": {
+    "test": "jest --config .jest.js --no-cache",
+    "dist": "antd-tools run dist",
+    "compile": "antd-tools run compile",
+    "build": "npm run compile && npm run dist"
+  }
+}
+```
+
+#### `config`
+
+`​​config​​​` 字段用于配置脚本中使用的环境变量，例如下面的配置，可以在脚本中使用 ​`​process.env.npm_package_config_port​`​ 进行获取。
+
+```json
+{
+  "config": {
+    "port": "8080"
+  }
+}
+```
+
+### 发布配置 ~new
+
+#### `preferGlobal`
+
+如果你的 ​​node.js​​​ 模块主要用于安装到全局的命令行工具，那么该值设置为 `​​true​​` ，当用户将该模块安装到本地时，将得到一个警告。这个配置并不会阻止用户安装，而是会提示用户防止错误使用而引发一些问题。
+
+#### `private`
+
+如果将 ​​private​​​ 属性设置为 ​`​true​`​，npm 将拒绝发布它，这是为了防止一个私有模块被无意间发布出去。
+
+#### `publishConfig`
+
+发布模块时更详细的配置，例如你可以配置只发布某个 ​`​tag`​​​、配置发布到的私有 `​​npm​​​` 源。更详细的配置可以参考 [​npm-config​](https://docs.npmjs.com/cli/v10/using-npm/config)
+
+#### `os`
+
+假如你开发了一个模块，只能跑在 `​​darwin​​​` 系统下，你需要保证 `​​windows​​` 用户不会安装到你的模块，从而避免发生不必要的错误。
+
+使用 `​​os​​` 属性可以帮助你完成以上的需求，你可以指定你的模块只能被安装在某些系统下，或者指定一个不能安装的系统黑名单：
+
+```json
+"os" : [ "darwin", "linux" ]
+"os" : [ "!win32" ]
+```
+
+> 在 node 环境下可以使用 process.platform 来判断操作系统
+
+#### `cpu`
+
+和上面的 `​​os​​​` 类似，我们可以用 `​​cpu​​` 属性更精准的限制用户安装环境：
+
+```json
+"cpu" : [ "x64", "ia32" ]
+"cpu" : [ "!arm", "!mips" ]
+```
+
+> 在 node 环境下可以使用 process.arch 来判断 cpu 架构
+
+## 参考
+
+[package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)  
+[前端工程化 - 剖析 npm 的包管理机制](https://blog.51cto.com/u_15707676/5714424)  
+[一文搞懂 peerDependencies](https://segmentfault.com/a/1190000022435060)
