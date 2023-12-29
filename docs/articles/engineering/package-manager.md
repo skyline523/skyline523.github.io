@@ -428,6 +428,70 @@ package.json 文件的`scripts`属性支持许多内置脚本及其预设生命�
 
 > 在 node 环境下可以使用 process.arch 来判断 cpu 架构
 
+## 包版本管理机制 ~new
+
+`nodejs`离不开`npm`优秀的依赖管理系统。在介绍整个依赖系统之前，必须要了解 npm 如何管理依赖包的版本。
+
+### 查看 npm 包版本
+
+- `npm view <pkg> version`查看`<pkg>`的最新版本
+- `npm view <pkg> versions`查看`<pkg>`在 npm 服务器上所有发布过的版本
+- `npm ls`查看当前仓库依赖树上所有包的版本信息
+
+### SemVer 规范
+
+npm 包中的模块版本都需要遵循`SemVer`规范，是由`Github`起草的一个具有指定意义的，统一的版本号表示规则。（Sem[antic] Ver[sion]）语义化版本的缩写。
+
+> 详细规范请查看[SemVer 规范官网](https://semver.org/)
+
+#### 标准版本
+
+`SemVer`规范的标准版本号采用`x.y.z`的格式，每位都是非负的整数，且禁止在数字前方补零。
+
+- `x`: 主版本号(major)，当你做了不兼容的 API 修改
+- `y`: 次版本号(minor)，当你做了向下兼容的功能新新增
+- `z`: 修订号(patch)，当你做了向下兼容的问题修正
+
+#### 现行版本
+
+当某个版本改动比较大，并非稳定且可能无法满足预期的兼容性需求时，你可能要先发布一个现行版本。
+
+现行版本号可以加到标准版本号的后面，先加上一个连接号再加上一连串以句点分割的标识符和版本编译信息。
+
+比如`vitepress`的版本号：
+
+<ZoomImg
+  src="/assets/articles/engineering/vitepress_versions.png"
+  desc="vitepress部分版本号"
+/>
+
+能看出常用的关键字:
+
+- `alpha`内部版本
+- `draft`草稿版本
+- `beta`公测版本
+- `rc(release candidate)`正式版本的候选版本
+
+#### 发布版本
+
+在修改`npm`包某些功能后通常需要发布一个新的版本，我们通常的做法就是直接修改`package.json`到指定版本。如果操作失误，很容易造成版本号混乱，我们可以借助符合`SemVer`规范的命令来完成这一操作:
+
+- `npm version patch`: 升级修订版本号
+- `npm version minor`: 升级次版本号
+- `npm version major`: 升级主版本号
+
+### 版本工具使用
+
+如果需要对一些版本号的操作，如果这些版本号符合`SemVer`规范，我们可以借助`semver`包来帮助我们进行一些操作
+
+> npm 也使用了该工具来处理版本相关的工作
+
+```shell
+npm install semver
+```
+
+其用法可以查看文档 [node-semver](https://github.com/npm/node-semver)
+
 ## 参考
 
 [package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)  
