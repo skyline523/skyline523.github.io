@@ -550,7 +550,7 @@ npm install semver
 
 <ZoomImg
   src="/assets/articles/engineering/npm-outdated.png"
-  desc="npm outdated查看依赖更新列表"
+  desc="npm outdated查看依赖需要更新的列表"
 />
 
 `npm outdated` 可以帮助列出有哪些没有升级到最新版本的依赖:
@@ -559,6 +559,10 @@ npm install semver
 - 红色表示符合指定的语意化版本范围 - 需要升级
 
 `npm update`会升级所有红色依赖
+
+::: tip
+当你的项目选择了其他包管理器时，对应的命令也可能会改变，比如`pnpm`使用的升级依赖为`pnpm up`。不知道其他包管理器对应的命令时，请上对应官方文档查看。
+:::
 
 ### 依赖版本选择的最佳实践
 
