@@ -11,11 +11,17 @@ yt，这个模块我用来记一些我看到优质文章或者需要解决某些
 
 ## 路线
 
-大概会从三个方向入手，但是还不知道从哪个先开始：
-
 - 查缺补漏 JavaScript
 - 补足 TypeScript
-- 前端工程化之模块化
+- 记录面试需要的基础知识
+- ~~前端工程化之模块化~~
+- ~~前端工程化之包管理器~~
+- 前端工程化之构建工具, Webpack 等
+- 前端工程化之脚手架
+- 前端自动化(流水线)
+  - 服务器部署
+  - nginx 配置
+  - CI/CD
 
 ## 评论模块
 
@@ -33,7 +39,17 @@ yt，这个模块我用来记一些我看到优质文章或者需要解决某些
 
 进入页面后图片没在视口应该`懒加载`，且如果有 size 较大的图片在第一视口内，加载起来也会比较慢，所有需要`图片渐进式加载`。
 
-懒加载就直接使用`img`元素自带的`loading=lazy`即可。
+懒加载就直接使用`img`元素自带的`loading=lazy`即可。在[`vitepress@1.0.0-rc.34`](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md#100-rc34-2023-12-30)新支持了自定义图片懒加载配置，可以在`config.ts`中打开:
+
+```ts
+export default defineConfig({
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
+  }
+})
+```
 
 图片渐进式加载还没有找到解决方案。
 
