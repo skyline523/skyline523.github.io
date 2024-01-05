@@ -32,6 +32,16 @@ features:
     title: 随笔
     details: 随便聊聊和编程没多大关系的事
     link: /notes/guide
+  - icon:
+      src: https://hungryturbo.zhubai.love/favicon.png
+    title: 前端食堂技术周刊
+    details: 周周尝鲜，人工筛选前端圈每周最新资讯。
+    link: https://hungryturbo.zhubai.love/
+  - icon:
+      src: https://javascriptweekly.com/favicon.png
+    title: JavaScript Weekly
+    details: JavaScript 文章、新闻和超酷项目的时事通讯点击并应用
+    link: https://javascriptweekly.com/latest
 ---
 
 <style>
