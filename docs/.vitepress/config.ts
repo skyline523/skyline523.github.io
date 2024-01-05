@@ -13,7 +13,10 @@ export default defineConfig({
   description: "Leet' Blog，包含前端常用知识、学习记录笔记、工具分享等",
   head,
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    image: {
+      lazyLoading: true
+    }
   },
   appearance: 'dark',
   themeConfig: {
