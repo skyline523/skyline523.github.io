@@ -3,11 +3,8 @@ import { DefaultTheme } from 'vitepress'
 export const sidebar: DefaultTheme.Sidebar = {
   '/articles/': [
     {
-      text: 'VitePress',
       items: [
-        { text: 'VitePress部署到Github', link: '/articles/vitepress/deploy-to-github' },
-        { text: '文章目录添加自定义标识', link: '/articles/vitepress/outline-symbol' },
-        { text: '文章图片缩放功能', link: '/articles/vitepress/img-zoom' }
+        { text: 'VitePress 相关', link: '/articles/vitepress' },
       ]
     },
     {

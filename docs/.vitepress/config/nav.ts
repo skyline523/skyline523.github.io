@@ -5,7 +5,7 @@ export const nav: DefaultTheme.NavItem[] = [
   {
     text: '文章',
     items: [
-      { text: 'VitePress', link: '/articles/vitepress/deploy-to-github' },
+      { text: 'VitePress', link: '/articles/vitepress' },
       {
         items: [
           { text: 'TypeScript 类型验算', link: '/articles/typescript/calculate' },
