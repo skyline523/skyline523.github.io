@@ -48,15 +48,20 @@ export const nav: DefaultTheme.NavItem[] = [
         items: [
           { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
         ]
-      },
+      }
+    ]
+  },
+  {
+    text: '快捷入口',
+    items: [
       {
         items: [
-          { text: '随笔', link: '/notes/guide' },
+          { text: '备忘录', link: '/notes/memo' },
           { text: '留言', link: '/notes/comment' },
+          { text: '日志', link: '/websitelog' },
         ]
       }
     ]
   },
-  { text: '建站日志', link: '/websitelog' },
   { text: '友链', link: '/friend-links' }
 ]
