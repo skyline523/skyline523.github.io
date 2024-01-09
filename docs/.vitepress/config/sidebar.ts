@@ -4,7 +4,6 @@ export const sidebar: DefaultTheme.Sidebar = {
   '/articles/': [
     {
       items: [
-        { text: '新设备配置前端工具', link: '/articles/frontend-get-started' },
         { text: 'VitePress 相关', link: '/articles/vitepress' },
       ]
     },
