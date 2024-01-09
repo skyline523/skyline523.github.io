@@ -28,14 +28,15 @@ features:
     title: 笔记
     details: 平时复习或学习新技术的笔记文档<br />以及踩过的坑
     link: /notes/pit/ui-library
-  - icon: ✏️
-    title: 随笔
-    details: 随便聊聊和编程没多大关系的事
-    link: /notes/guide
+  - icon:
+      src: https://momoyu.cc/favicon32.ico
+    title: 摸摸鱼热榜
+    details: 每天更新各个平台的热搜话题
+    link: https://momoyu.cc/
   - icon:
       src: https://hungryturbo.zhubai.love/favicon.png
     title: 前端食堂技术周刊
-    details: 周周尝鲜，人工筛选前端圈每周最新资讯。
+    details: 周周尝鲜，人工筛选前端圈每周最新资讯
     link: https://hungryturbo.zhubai.love/
   - icon:
       src: https://javascriptweekly.com/favicon.png
