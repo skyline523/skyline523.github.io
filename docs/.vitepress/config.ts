@@ -8,7 +8,7 @@ import { genFeed } from './plugins/genFeed'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: "Leet",
+  title: "Leet Blog",
 
   description: "Leet' Blog，包含前端常用知识、学习记录笔记、工具分享等",
   head,
