@@ -32,3 +32,23 @@ const formRules = ref<FormRules>({
   ]
 })
 ```
+
+### table 设置高度问题
+
+一般使用`el-table`时，大部分都需要固定表格高度防止整个页面滚动。element-plus 文档给了 api: `height`来设置。但是如果是这种形式`calc(100% - 12px)`这种计算形式，会出现表格底部多出来一部分，这部分高度。
+
+<ZoomImg src="/assets/notes/pit/ui/el-table_01.png" />
+
+如果给计算高度，`el-table`和`el-table__inner-wrapper`都会设置这个高度。
+
+<ZoomImg src="/assets/notes/pit/ui/el-table_02.png" />
+
+解决: 添加`max-height`使用计算高度，`height`使用 100%高度
+
+```vue
+<el-table
+  :data="pageDataSource"
+  max-height="calc(100% - 38px)"
+  height="100%"
+>
+```
