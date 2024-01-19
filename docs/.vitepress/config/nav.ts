@@ -47,7 +47,8 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         items: [
-          { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
+          { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' },
+          { text: '其他踩坑记录', link: '/notes/pit/others' },
         ]
       }
     ]

@@ -43,7 +43,8 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text: '踩坑记录',
       items: [
-        { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' }
+        { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' },
+        { text: '其他踩坑记录', link: '/notes/pit/others' },
       ]
     },
     { text: '阅读须知', link: '/notes/guide' },
