@@ -29,6 +29,10 @@ date: 2023-11-27
 
 ## 创建项目
 
+如果你懒得一步一步敲代码，那可以直接克隆完整项目: [vue-vuetify-template](https://github.com/skyline523/vue-vuetify-template)
+
+项目不仅包含了规范代码所需的配置，而且还包含了 vue-router, pinia, vuetify, ts, iconify 等。
+
 <ZoomImg
   src='/assets/workflow/code-and-style-standard/init-vite.png'
   desc="创建项目"
@@ -633,4 +637,30 @@ module.exports = {
 "scripts": {
   "commit": "git-cz"
 }
+```
+
+## editorconfig
+
+完成上面的配置后，有可能会出现莫名其妙的报错，如:
+
+`Delete `␍`eslint(prettier/prettier) `
+
+新建`.editorconfig`:
+
+```
+# http://editorconfig.org
+root = true
+
+# 表示所有文件适用
+[*]
+charset = utf-8 # 设置文件字符集为 utf-8
+end_of_line = lf # 控制换行类型(lf | cr | crlf)
+indent_style = space # 缩进风格（tab | space）
+insert_final_newline = true # 始终在文件末尾插入一个新行
+
+# 表示仅 md 文件适用以下规则
+[*.md]
+max_line_length = off # 关闭最大行长度限制
+trim_trailing_whitespace = false # 关闭末尾空格修剪
+
 ```
