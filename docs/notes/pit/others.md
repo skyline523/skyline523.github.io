@@ -42,3 +42,14 @@ module.exports = {
   ]
 }
 ```
+
+## commit 报错
+
+按照上面的步骤全部安装好后，执行`pnpm commit`后会出现报错:
+
+<ZoomImg
+  src="/assets/notes/pit/others/commit_bug.png"
+  desc="运行pnpm commit的报错"
+/>
+
+将`.commitlintrc.cjs`的编码改成 utf-8 即可。
