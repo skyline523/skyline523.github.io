@@ -193,15 +193,17 @@ pnpm install stylelint postcss postcss-scss postcss-html stylelint-config-pretti
 
 ::: info 依赖说明
 
+安装的依赖是以 scss 为基础安装的，若不需要可去掉相关 scss 的依赖
+
 - `stylelint`: css 样式 lint 工具
 - `postcss`: 转换 css 代码工具
-- `postcss-less`: 识别 scss 语法
+- `postcss-scss`: 识别 scss 语法
 - `postcss-html`: 识别 html/vue 中的`<style></style>`标签中的样式
 - `stylelint-config-standard`: Stylelint 的标准可共享配置规则，详细可查看官方文档
 - `stylelint-config-prettier`: 关闭所有不必要或可能与 Prettier 冲突的规则
 - `stylelint-config-recommended-less`: scss 的推荐可共享配置规则，详细可查看官方文档
 - `stylelint-config-standard-vue`: lint.vue 文件的样式配置
-- `stylelint-less`: stylelint-config-recommended-less 的依赖，scss 的 stylelint 规则集合
+- `stylelint-scss`: stylelint-config-recommended-scss 的依赖，scss 的 stylelint 规则集合
 - `stylelint-order`: 指定样式书写的顺序，在.stylelintrc.js 中 order/properties-order 指定顺序
 
 :::
@@ -350,7 +352,7 @@ src/assets
 
 :::
 
-### 添加脚本命令
+### 添加脚本命令 ~new
 
 在`package.json`中`script`添加命令：
 
@@ -359,6 +361,10 @@ src/assets
   "lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix"
 }
 ```
+
+::: tip
+如果安装的 stylelint 版本时>=15.0，使用脚本命令时会出现 bug，请查看文章[stylelint v15 导致的报错](/notes/pit/others#stylelint-v15)
+:::
 
 ## husky
 
