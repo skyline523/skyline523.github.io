@@ -71,3 +71,7 @@ export default defineConfig({
 本来应该轮到学习工程化第三步(构建工具，先学习 webpack)了，学习这个时间应该会长一些，所以我打算先更新点别的。
 
 别的就是记录一下前端在一台新电脑上需要干些什么。
+
+## 待阅
+
+[前端工程化详解](https://guide.duanhl.com/)

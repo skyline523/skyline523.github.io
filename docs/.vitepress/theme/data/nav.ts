@@ -443,6 +443,12 @@ export const NAV_DATA: NavData[] = [
         desc: 'Rust 语言圣经',
         link: 'https://course.rs/'
       },
+      {
+        icon: 'https://course.rs/favicon.svg',
+        title: 'Rust 语言实战',
+        desc: 'Rust 语言圣经',
+        link: 'https://practice-zh.course.rs/'
+      },
     ]
   },
   {
