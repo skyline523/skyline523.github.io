@@ -138,3 +138,26 @@ function sum(a: number, b: number, c: number) {
 const currySum = curry(sum)
 currySum(1)(2)(3)
 ```
+
+## 防抖函数类型标注
+
+```ts
+function handler(a: number, b: number) {
+  return a + b
+}
+
+const dHandler = debounce(handler)
+
+// bad
+declare function debounce(fn: Function, duration?: number): Function
+
+// or
+// bad
+declare function debounce<T>(fn: T, duration?: number): T
+
+// good
+declare function debounce<A extends any[], R>(
+  fn: (...args: A) => R,
+  duration?: number
+): (...args: A) => void
+```
