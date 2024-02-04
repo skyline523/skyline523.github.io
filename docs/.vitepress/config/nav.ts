@@ -7,7 +7,6 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       { text: 'VitePress', link: '/articles/vitepress' },
       { text: '内存泄漏和垃圾回收', link: '/articles/garbage-collection' },
-      { text: '动态表单', link: '/articles/dynamic-form' },
       {
         items: [
           { text: 'TypeScript 类型验算', link: '/articles/typescript/calculate' },

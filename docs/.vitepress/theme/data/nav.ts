@@ -532,7 +532,13 @@ export const NAV_DATA: NavData[] = [
         title: 'SegmentFault 思否',
         desc: '技术问答开发者社区',
         link: 'https://segmentfault.com'
-      }
+      },
+      {
+        icon: 'https://xlog.app/assets/logo.svg',
+        title: 'xLog',
+        desc: '书写在区块链上的开源创作社区。',
+        link: 'https://xlog.app/'
+      },
     ]
   },
   {

@@ -7,6 +7,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: 'VitePress 相关', link: '/articles/vitepress' },
         { text: '内存泄漏和垃圾回收', link: '/articles/garbage-collection' },
         { text: '动态表单', link: '/articles/dynamic-form' },
+        { text: '移动端路由动画', link: '/articles/h5-page-transition' },
       ]
     },
     {
