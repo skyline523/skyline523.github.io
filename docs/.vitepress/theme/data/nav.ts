@@ -130,6 +130,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.naiveui.com/zh-CN/os-theme'
       },
       {
+        icon: 'https://www.shadcn-vue.com/favicon.ico',
+        title: 'Shadcn-vue',
+        desc: 'Build your component library',
+        link: 'https://www.shadcn-vue.com/'
+      },
+      {
         icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
         title: 'Vant',
         desc: '轻量、可定制的移动端 Vue 组件库',
@@ -278,6 +284,12 @@ export const NAV_DATA: NavData[] = [
         desc: '快速创建易于访问的 React 应用程序',
         link: 'https://chakra-ui.com/'
       },
+      {
+        icon: 'https://ui.shadcn.com/favicon.ico',
+        title: 'Shadcn UI',
+        desc: 'Build your component library',
+        link: 'https://ui.shadcn.com/'
+      }
     ]
   },
   {
