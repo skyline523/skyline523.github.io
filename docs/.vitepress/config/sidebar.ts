@@ -43,6 +43,12 @@ export const sidebar: DefaultTheme.Sidebar = {
   ],
   '/notes/': [
     {
+      text: 'Vue 文档笔记',
+      items: [
+        { text: '基础', link: '/notes/vue/index' }
+      ]
+    },
+    {
       text: '踩坑记录',
       items: [
         { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' },
