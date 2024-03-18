@@ -23,6 +23,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tool.lu'
       },
       {
+        icon: 'https://static.deepl.com/img/favicon/favicon_96.png',
+        title: 'DeepL',
+        desc: '超级准确的翻译工具',
+        link: 'https://www.deepl.com/translator'
+      },
+      {
         icon: 'https://www.processon.com/public_login/favicon.983368c6.ico',
         title: 'ProcessOn',
         desc: '在线流程图思维导图',
@@ -47,7 +53,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://app.brandmark.io/v3/'
       },
       {
-        icon: 'https://icon-sets.iconify.design/favicon@32.png',
+        icon: 'https://iconify.design/favicon.ico',
         title: 'iconify',
         desc: '所有流行的图标库，一个框架',
         link: 'https://icon-sets.iconify.design/'
@@ -124,7 +130,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://quasar.dev/'
       },
       {
-        icon: 'https://www.naiveui.com/assets/naivelogo-93278402.svg',
+        icon: 'https://www.naiveui.com/assets/naivelogo-XQ1U1Js8.svg',
         title: 'Naive UI',
         desc: '一个 Vue 3 组件库',
         link: 'https://www.naiveui.com/zh-CN/os-theme'
@@ -296,7 +302,7 @@ export const NAV_DATA: NavData[] = [
     title: 'CSS 相关',
     items: [
       {
-        icon: 'https://postcss.org/assets/logo-3e39b0aa.svg',
+        icon: 'https://postcss.org/assets/logo-tq8kLoG9.svg',
         title: 'PostCSS',
         desc: '一个用 JavaScript 转换 CSS 的工具',
         link: 'https://postcss.org'
