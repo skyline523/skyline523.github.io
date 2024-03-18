@@ -45,7 +45,8 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'Vue 文档笔记',
       items: [
-        { text: '基础', link: '/notes/vue/index' }
+        { text: '基础', link: '/notes/vue/index' },
+        { text: '深入组件', link: '/notes/vue/diving-component' },
       ]
     },
     {
