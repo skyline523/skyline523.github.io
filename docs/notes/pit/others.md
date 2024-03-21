@@ -45,7 +45,7 @@ module.exports = {
 
 ## commit 报错
 
-按照上面的步骤全部安装好后，执行`pnpm commit`后会出现报错:
+使用`git-cz`来提交项目代码时，执行`pnpm commit`后会出现报错:
 
 <ZoomImg
   src="/assets/notes/pit/others/commit_bug.png"
@@ -53,3 +53,30 @@ module.exports = {
 />
 
 将`.commitlintrc.cjs`的编码改成 utf-8 即可。
+
+## eslint 报错 ~new
+
+有可能在项目中碰到下面这种情况:
+
+<ZoomImg src="/assets/notes/pit/others/eslint_bug_1.png" desc=".vue文件报错Parsing error: Unexpected token <" />
+
+<ZoomImg src="/assets/notes/pit/others/eslint_bug_2.png" desc=".ts文件报错Parsing error: The keyword 'xxx' is reserved" />
+
+你可能会以为是`eslint`文件的配置有问题，后来发现配置正常；你也可能会以为是`ts.config.json`配置有问题，后来发现配置也是正常的。
+
+其实问题原因是在于你的`eslint`文件的格式，当你的`eslint`版本大于等于`v8.21`时，且文件格式为`eslint.config.js`就会出现这种问题，这时候只需要打开 vscode 的一项配置即可:
+
+<ZoomImg src="/assets/notes/pit/others/eslint_bug_fix.png" desc="vscode eslint config" />
+
+::: tip
+另外，可能会以为配置文件改成`.eslintrc.js`就可以了，这样确实没错，但是要注意的是官方将在 v9 版本中废弃这种格式。
+https://zh-hans.eslint.org/docs/latest/use/configure/configuration-files
+:::
+
+## 新版 Volar(vue-official) ~new
+
+这个 bug 应该会在后期修复，记录下我当时碰到的时间点(2024-03-21)。
+
+最近打开 vscode 会有提示说`volar`已经废弃，建议使用新插件`Vue-official`，更新之后，会发现很多项目都会报错无法识别导入的文件、和方法啥的。这在仓库 issues 中也有提出各种各样的 bug。应该就是新的插件还不稳定，这只能等官方修复了。
+
+但是项目一直爆红那也没办法开发了，那怎么办呢？亲测把插件降级到`v1.8.27`版本能解决这个问题。但是有时候还是不生效，需要频繁来回切换版本才能解决。
