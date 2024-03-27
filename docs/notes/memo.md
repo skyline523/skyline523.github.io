@@ -77,3 +77,17 @@ export default defineConfig({
 ## 待阅
 
 [前端工程化详解](https://guide.duanhl.com/)
+
+## 每日两题题目记录
+
+2024.03.20 ajax、axios、fetch 有什么区别
+2024.03.21 commonJS、AMD、CMD、ESModule 区别详细总结
+2024.03.21 Post 为什么会发送两次请求
+2024.03.22 vue-router 中常用的 hash 和 history 路由模式实现原理
+2024.03.22 get 请求和 post 请求的区别有哪些
+2024.03.25 const 对象的属性可以修改吗
+2024.03.25 Vue data 中某一个属性的值改变后，视图会立即同步执行重新渲染吗？为什么？
+2024.03.26 说说 CSS 选择器及其优先级
+2024.03.26 描述下浏览器的分级缓存策略
+2024.03.27 http 通信的时候，在 cache-control 这个参数里面的配置项 no-cache 和 no-store 有什么区别
+2024.03.27 简述一下 XMLhttpRequest 发起请求的过程

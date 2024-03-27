@@ -56,6 +56,12 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '其他踩坑记录', link: '/notes/pit/others' },
       ]
     },
+    {
+      text: '每日两题',
+      items: [
+        { text: '2024-03-20', link: '/notes/interview/2024-03-20' }
+      ]
+    },
     { text: '阅读须知', link: '/notes/guide' },
     { text: '建站历程', link: '/notes/site-process' },
     { text: '备忘录', link: '/notes/memo' },
