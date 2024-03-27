@@ -26,7 +26,7 @@ _同名简写_，在 Vue3.4+中，当属性名和值的名称相同时，可以�
 
 <div :id="id"></div>
 
-<div v-bind:"id"></div>
+<div v-bind:id></div>
 ```
 
 `v-bind`在表单的`:disabled`下的行为略有不同:  
