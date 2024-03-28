@@ -39,6 +39,7 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     },
     { text: 'Emojis😄', link: '/workflow/emojis' },
+    { text: '建站历程', link: '/workflow/site-process' }
 
   ],
   '/notes/': [
@@ -62,14 +63,13 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '2024-03-20', link: '/notes/interview/2024-03-20' }
       ]
     },
-    { text: '阅读须知', link: '/notes/guide' },
-    { text: '建站历程', link: '/notes/site-process' },
-    { text: '备忘录', link: '/notes/memo' },
-    {
-      items: [
-        { text: '留言', link: '/notes/comment' }
-      ]
-    },
+    // { text: '阅读须知', link: '/notes/guide' },
+    // { text: '备忘录', link: '/notes/memo' },
+    // {
+    //   items: [
+    //     { text: '留言', link: '/notes/comment' }
+    //   ]
+    // },
 
   ]
 }

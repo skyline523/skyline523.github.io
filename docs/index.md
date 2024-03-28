@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 随便看看
-      link: /notes/guide
+      link: /quickStart/guide
 
 features:
   - icon: 🔎

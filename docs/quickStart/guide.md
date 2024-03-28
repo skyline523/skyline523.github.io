@@ -1,5 +1,5 @@
 ---
-outline: deep
+outline: false
 date: 2023-12-06
 ---
 

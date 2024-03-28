@@ -39,7 +39,7 @@ date: 2023-11-09
 这个版本是在上一家公司闲暇的时间慢慢摸索的，只做了大部分的管理后台和后端，博客官网没做。
 这个时候我已经早就放弃了 React，因为它的特殊，我找不到工作，所以就转到 Vue 了。功能也只有简单的博客的增删改查，登录，个人中心。这个时候用的技术栈是 Vue, Vuetify, tailwindcss, pinia。也是喜欢尝试不一样的东西，这个指的是 UI 库，我很喜欢这种简洁但又不失优雅的样式。
 
-<ZoomImg src='/assets/notes/site-process/blog3.0-login.png' desc='博客3.0后台管理的登录页' />
+<ZoomImg src='/assets/workflow/site-process/blog3.0-login.png' desc='博客3.0后台管理的登录页' />
 
 这个网站因为部署在 Vercel 上，所以应该需要科学上网才能进。但是只能看这个登录页，仅此而已。因为我忘了登录密码。我甚至懒得把这个网站给停掉。
 
@@ -57,15 +57,15 @@ date: 2023-11-09
 > TODO<br />
 > Unsplash 图片库<br />
 
-<ZoomImg src='/assets/notes/site-process/blog4.0-login.png' desc='博客4.0后台管理的登录页' />
+<ZoomImg src='/assets/workflow/site-process/blog4.0-login.png' desc='博客4.0后台管理的登录页' />
 
 当你点击这个地址是可能我的域名已经过期了。下面展示几个网站的效果图：
 
-<ZoomImg src='/assets/notes/site-process/blog4.0-posts.png' desc='文章列表' />
+<ZoomImg src='/assets/workflow/site-process/blog4.0-posts.png' desc='文章列表' />
 
-<ZoomImg src='/assets/notes/site-process/blog4.0-playground.png' desc='Code Playground' />
+<ZoomImg src='/assets/workflow/site-process/blog4.0-playground.png' desc='Code Playground' />
 
-<ZoomImg src='/assets/notes/site-process/blog4.0-profile.png' desc='个人中心' />
+<ZoomImg src='/assets/workflow/site-process/blog4.0-profile.png' desc='个人中心' />
 
 是不是感觉很不错。但是因为我野心很大，还没做就想了好多东西都想加进去，现在是加了很多功能，但是卵用没用，就是些花里胡哨。虽然但是我还是挺喜欢这个后台管理页面的。
 

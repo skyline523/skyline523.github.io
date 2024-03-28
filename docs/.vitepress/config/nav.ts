@@ -38,6 +38,7 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         items: [
           { text: 'Emojis', link: '/workflow/emojis' },
+          { text: '建站历程', link: '/workflow/site-process' }
         ]
       }
     ]
@@ -64,8 +65,8 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         items: [
-          { text: '备忘录', link: '/notes/memo' },
-          { text: '留言', link: '/notes/comment' },
+          { text: '备忘录', link: '/quickStart/memo' },
+          { text: '留言', link: '/quickStart/comment' },
           { text: '日志', link: '/websitelog' },
         ]
       }
