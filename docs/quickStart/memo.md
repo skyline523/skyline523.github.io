@@ -98,3 +98,6 @@ export default defineConfig({
 2024.03.27 简述一下 XMLhttpRequest 发起请求的过程
 
 2024.03.28 websocket 是怎么实现双向通信的？
+2024.03.28 为什么 Vue 组件定义的时候 data 属性要定义成一个函数而不是一个对象
+
+2024.03.29 Promise.then 返回的是什么?
