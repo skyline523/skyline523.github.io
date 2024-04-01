@@ -60,7 +60,8 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text: '每日两题',
       items: [
-        { text: '2024-03-20', link: '/notes/interview/2024-03-20' }
+        { text: '2024-03-20', link: '/notes/interview/2024-03-20' },
+        { text: '2024-03-21', link: '/notes/interview/2024-03-21' }
       ]
     },
     // { text: '阅读须知', link: '/notes/guide' },

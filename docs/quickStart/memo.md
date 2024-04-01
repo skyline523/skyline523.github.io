@@ -80,11 +80,6 @@ export default defineConfig({
 
 ## 每日两题题目记录
 
-2024.03.20 ajax、axios、fetch 有什么区别
-
-2024.03.21 commonJS、AMD、CMD、ESModule 区别详细总结  
-2024.03.21 Post 为什么会发送两次请求
-
 2024.03.22 vue-router 中常用的 hash 和 history 路由模式实现原理  
 2024.03.22 get 请求和 post 请求的区别有哪些
 
@@ -101,3 +96,6 @@ export default defineConfig({
 2024.03.28 为什么 Vue 组件定义的时候 data 属性要定义成一个函数而不是一个对象
 
 2024.03.29 Promise.then 返回的是什么?
+
+2024.04.01 父 div 设置为 position:fixed，子为 absolute，父元素动子会跟着动吗
+2024.04.01 JS 中堆和栈的区别，浏览器的垃圾回收机制
