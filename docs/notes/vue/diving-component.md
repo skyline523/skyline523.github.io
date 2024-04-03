@@ -471,4 +471,98 @@ export default {
 
 ## 依赖注入
 
+### Prop 逐级透传
+
+业务中，我们会碰到这种情况：有一三层级的组件树，c 组件要使用 a 组件的数据，但是需要 a 组件传递给 b 再传递给 c。这就是 prop 逐级透传。如果 b 组件根本不关心传给 c 组件的数据，那这整个过程 a 传给 b 这个过程是完全没必要的。
+
+<ZoomImg src="https://cn.vuejs.org/assets/prop-drilling.FyV2vFBP.png" />
+
+所以就有了`provide`和`inject`。一个父组件相对所有的后代组件，会作为依赖提供者。任何后代的组件树，都可以注入由父组件提供给整条链路的依赖。
+
+<ZoomImg src="https://cn.vuejs.org/assets/provide-inject.tIACH1Z-.png" />
+
+### `provide`
+
+为组件后代提供数据要用到`provide()`（必须是与 setup 同步调用）:
+
+```vue
+<script setup>
+import { provide } from 'vue'
+
+// (name, value)
+provide('message', 'hello')
+</script>
+```
+
+还可以直接在最顶层 App 上提供依赖，这样整个应用下都能使用依赖。直接在最顶层`App.vue`使用`provide()`即可。
+
+### `inject`
+
+```vue
+<script setup>
+import { inject } from 'vue'
+
+const message = inject('message')
+</script>
+```
+
+如果提供的值是 ref，那么注入进来的会是该 ref 对象，而不会自动解包。这使得注入放组件能够通过 ref 对象保持了和供给放的响应式链接
+
+如果在注入一个值不要求必须有提供者，那么可以声明一个默认值
+
+```js
+const value = inject('message', '默认值')
+
+// 在一些场景中，默认值可能需要通过调用一个函数或者初始化一个类来取得
+// 为了避免在用不到默认值的情况下进行不必要的计算或产生副作用，可以用工厂函数创建
+// 第三个参数表示默认值应该被当作一个工厂函数
+const value = inject('message', () => new ExpensiveClass(), true)
+```
+
+### 和响应式数据配合使用
+
+**建议尽可能将任何对响应式状态的变更都保持在供给方组件中**，这样可以确保所提供状态的声明和变更操作都内聚在同一个组件内，使其更容易维护
+
+如果需要在注入方组件中更改数据，可以在提供方声明一个更改该数据的函数:
+
+::: code-group
+
+```vue [Provide.vue]
+<script setup>
+import { provide, ref } from 'vue'
+
+const location = ref('North Pole')
+
+function updateLocation() {
+  location.value = 'South Pole'
+}
+
+provide('location', {
+  location,
+  updateLocation
+})
+</script>
+```
+
+```vue [Inject.vue]
+<script setup>
+import { inject } from 'vue'
+
+const { location, updateLocation } = inject('location')
+</script>
+
+<template>
+  <button @click="updateLocation">{{ location }}</button>
+</template>
+```
+
+:::
+
+如果你想确保注入方不能修改数据你可以这样做:
+
+```js
+const count = ref(0)
+provide('read-only-count', readonly(count))
+```
+
 ## 异步组件
