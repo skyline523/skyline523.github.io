@@ -17,21 +17,9 @@ date: 2023-11-27
 
 ## 介绍
 
-本项目将采用较新的技术栈来实现：
-
-- Vue3
-- Vite4
-- TypeScript
-- VueRouter
-- Pinia
-- tailwindcss
-- scss
+本文将记录新建玩一个项目后的代码规范配置等，包括 eslint, prettier, stylelint, husky, lint-stage, commitlint, cz-git, editorconfig
 
 ## 创建项目
-
-如果你懒得一步一步敲代码，那可以直接克隆完整项目: [vue-vuetify-template](https://github.com/skyline523/vue-vuetify-template)
-
-项目不仅包含了规范代码所需的配置，而且还包含了 vue-router, pinia, vuetify, ts, iconify 等。
 
 <ZoomImg
   src='/assets/workflow/code-and-style-standard/init-vite.png'
