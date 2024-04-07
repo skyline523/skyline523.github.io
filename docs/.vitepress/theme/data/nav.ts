@@ -470,6 +470,17 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
+    title: 'Java',
+    items: [
+      {
+        icon: 'https://tvax1.sinaimg.cn/crop.0.0.600.600.180/62d8efadly8h9w415whp5j20go0gowg2.jpg?KID=imgbed,tva&Expires=1712470523&ssig=yNE85e7vUX',
+        title: 'Java教程',
+        desc: '廖雪峰Java教程',
+        link: 'https://www.liaoxuefeng.com/wiki/1252599548343744'
+      }
+    ]
+  },
+  {
     title: '在线 IDE',
     items: [
       {
