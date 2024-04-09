@@ -80,9 +80,6 @@ export default defineConfig({
 
 ## 每日两题题目记录
 
-2024.03.22 vue-router 中常用的 hash 和 history 路由模式实现原理  
-2024.03.22 get 请求和 post 请求的区别有哪些
-
 2024.03.25 const 对象的属性可以修改吗  
 2024.03.25 Vue data 中某一个属性的值改变后，视图会立即同步执行重新渲染吗？为什么？
 

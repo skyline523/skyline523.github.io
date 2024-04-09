@@ -8,7 +8,7 @@ import { tools } from '../.vitepress/theme/data/tools.ts'
 
 # 常用工具库
 
-> 自己在发现的实用性高的和自己经常使用的库
+> 自己在发现的实用性高的和自己经常使用的库或者是其他资源
 
 <LNavLinks
   v-for="{ title, items } in tools"
