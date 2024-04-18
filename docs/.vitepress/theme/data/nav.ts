@@ -61,6 +61,36 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
+    title: '大佬博客',
+    items: [
+      {
+        icon: 'https://antfu.me/favicon.svg',
+        title: 'antfu',
+        desc: 'Vue和NuxtLabs核心开发成员，开发过很多前端的便利工具',
+        link: 'https://antfu.me/',
+        tag: 'RSS'
+      },
+      {
+        icon: 'https://leerob.io/favicon.ico',
+        title: 'leerob',
+        desc: 'Vercel产品副总裁，Next.js核心成员',
+        link: 'https://leerob.io/',
+      },
+      {
+        icon: 'https://www.ruanyifeng.com/blog/images/person2_s.jpg',
+        title: '阮一峰的网络日志',
+        desc: '这里记录每周值得分享的科技内容，周五发布。',
+        link: 'https://www.ruanyifeng.com/blog/',
+      },
+      {
+        title: '茂茂物语',
+        link: 'https://notes.fe-mm.com/',
+        icon: 'https://notes.fe-mm.com/favicon.ico',
+        desc: '茂茂的成长之路'
+      },
+    ]
+  },
+  {
     title: 'Vue Ecosystem',
     items: [
       {
