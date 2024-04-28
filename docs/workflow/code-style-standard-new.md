@@ -5,7 +5,7 @@ date: 2024-04-28
 
 # 规范代码
 
-之前那篇[规范代码的文章](./code-style-standard)，已经算是比较旧的了，比如在规范 stylelint 时因为 v15 版本原因废弃了`stylelint-config-prettier`插件；还有就是那篇文章中都是使用的这种文件格式`.xxxrc.{js,cjs,mjs}`，在 eslint v9 中官方又废弃了这种写法，改成使用`eslint.config.js`。
+之前那篇[规范代码的文章](/workflow/code-style-standard.md)，已经算是比较旧的了，比如在规范 stylelint 时因为 v15 版本原因废弃了`stylelint-config-prettier`插件；还有就是那篇文章中都是使用的这种文件格式`.xxxrc.{js,cjs,mjs}`，在 eslint v9 中官方又废弃了这种写法，改成使用`eslint.config.js`。
 
 > 我们正在过渡到 ESLint v9.0.0 中的新配置系统。但在 v9.0.0 中将被弃用。
 

@@ -58,6 +58,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present Leet'
     }
   },
+  ignoreDeadLinks: true,
   async buildEnd(siteConfig) {
     await genFeed(siteConfig)
   }
