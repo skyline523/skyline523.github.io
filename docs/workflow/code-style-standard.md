@@ -17,7 +17,7 @@ date: 2023-11-27
 
 ## 介绍
 
-本文将记录新建玩一个项目后的代码规范配置等，包括 eslint, prettier, stylelint, husky, lint-stage, commitlint, cz-git, editorconfig
+本文将记录新建完一个项目后的代码规范配置等，包括 eslint, prettier, stylelint, husky, lint-stage, commitlint, cz-git, editorconfig
 
 ## 创建项目
 

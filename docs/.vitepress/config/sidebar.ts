@@ -29,7 +29,8 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: '项目规范',
       items: [
         { text: '编程规范', link: '/workflow/programming-standard' },
-        { text: '规范项目代码', link: '/workflow/code-and-style-standard' },
+        { text: '规范项目代码(旧)', link: '/workflow/code-style-standard' },
+        { text: '规范项目代码', link: '/workflow/code-style-standard-new' },
       ]
     },
     {
