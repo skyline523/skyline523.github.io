@@ -54,7 +54,7 @@ module.exports = {
 
 将`.commitlintrc.cjs`的编码改成 utf-8 即可。
 
-## eslint 报错 ~new
+## eslint 报错
 
 有可能在项目中碰到下面这种情况:
 
@@ -73,10 +73,28 @@ module.exports = {
 https://zh-hans.eslint.org/docs/latest/use/configure/configuration-files
 :::
 
-## 新版 Volar(vue-official) ~new
+## 新版 Volar(vue-official)
 
 这个 bug 应该会在后期修复，记录下我当时碰到的时间点(2024-03-21)。
 
 最近打开 vscode 会有提示说`volar`已经废弃，建议使用新插件`Vue-official`，更新之后，会发现很多项目都会报错无法识别导入的文件、和方法啥的。这在仓库 issues 中也有提出各种各样的 bug。应该就是新的插件还不稳定，这只能等官方修复了。
 
 但是项目一直爆红那也没办法开发了，那怎么办呢？亲测把插件降级到`v1.8.27`版本能解决这个问题。但是有时候还是不生效，需要频繁来回切换版本才能解决。
+
+## Safari 上音频播放显示错误 ~new
+
+这个问题是由于你加载的文件类型错误的原因，可以看看 network 中文件请求的 response type 是不是`application/json`或者`application/octet-stream`等，要确保加载的音频为`audio/xxx`,在 Safari 上才能播放正确。请找你的后端帮你处理成音频类型返回吧。
+
+## Safari 网页遮挡 ~new
+
+在 Safari 浏览器中网页会被遮挡底部或顶部。
+
+<ZoomImg src="/assets/notes/pit/others/mobiles_height.png" desc="移动端浏览器" />
+
+不管是新的还是就的 ios，它们的 safari 浏览器的屏幕高度(screen height)都是包括了工具栏和地址栏的。就是图中括起来的部分，可以看到网页会被地址栏工具栏遮挡掉一部分，而且上下滑动也无法解决。而安卓的屏幕高度并不会包括工具栏地址栏。
+
+所以，尽量避免给标签设置`100vh`单位的高度，这将会导致网页在 safari 浏览器被遮挡一部分。
+
+::: tip
+当然你也可以通过给标签设置`padding`或`margin`让页面被遮挡部分留空，但是这并不是一个好的办法。
+:::
