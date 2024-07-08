@@ -52,6 +52,9 @@ export const sidebar: DefaultTheme.Sidebar = {
       ]
     },
     {
+      text: '网易云音乐', link: '/notes/netease',
+    },
+    {
       text: '踩坑记录',
       items: [
         { text: 'UI库踩坑记录', link: '/notes/pit/ui-library' },

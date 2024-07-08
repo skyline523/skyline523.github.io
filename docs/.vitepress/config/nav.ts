@@ -49,7 +49,8 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         items: [
           { text: 'Vue 文档笔记', link: '/notes/vue/index' },
-          { text: '每日两题', link: '/notes/interview/2024-03-20' }
+          { text: '每日两题', link: '/notes/interview/2024-03-20' },
+          { text: '网易云音乐', link: '/notes/netease' },
         ]
       },
       {
