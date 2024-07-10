@@ -34,10 +34,11 @@ features:
     details: 每天更新各个平台的热搜话题
     link: https://momoyu.cc/
   - icon:
-      src: https://hungryturbo.zhubai.love/favicon.png
-    title: 前端食堂技术周刊
-    details: 周周尝鲜，人工筛选前端圈每周最新资讯
-    link: https://hungryturbo.zhubai.love/
+      light: https://www.travellings.cn/assets/travelling-light.png
+      dark: https://www.travellings.cn/assets/travelling-dark.png
+    title: 开往
+    details: 让传统友链“活跃”，让网页相互接力，让流量相互流动，让网络开放起来
+    link: https://www.travellings.cn/go.html
   - icon:
       src: https://javascriptweekly.com/favicon.png
     title: JavaScript Weekly
