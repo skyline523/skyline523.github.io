@@ -6,7 +6,7 @@ date: 2023-11-09
 hero:
   name: 'LEET'
   text: '不要放弃自己的信念'
-  tagline: 我会找到办法的，我总有办法
+  tagline: 本站已迁移至https://leetme.netlify.app/, 12月将关闭本站
   image:
     src: '/assets/logo.svg'
     alt: 'Leet'
